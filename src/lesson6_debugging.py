@@ -2,7 +2,7 @@
 
 # debugging example syntax error
 #A — SyntaxError (error de sintaxis)
-def say_hello()
+def say_hello():
     print("Hola, mundo")
 
 """
@@ -13,7 +13,7 @@ Solución: falta : después del paréntesis — añade :.
 
 # B — NameError (nombre no definido)
 player = "Ryo"
-print("Player:", player_name)
+print("Player:", player)
 
 """
 Qué verás: NameError: name 'player_name' is not defined.
@@ -23,7 +23,7 @@ Solución: usar la variable correcta player o definir player_name.
 
 # C — TypeError (operación no válida entre tipos)
 gold = "100"
-gold += 50
+gold += str(50)
 
 """
 Qué verás: TypeError: can only concatenate str (not "int") to str.
@@ -33,7 +33,7 @@ Solución: convertir gold a int (gold = int(gold)) o formatear la salida.
 
 # D — IndexError (índice fuera de rango)
 items = ["espada", "escudo"]
-print(items[2])
+print(items[1])
 
 """
 Qué verás: IndexError: list index out of range.
@@ -41,7 +41,8 @@ Solución: revisar índices (máximo válido es 1 aquí) o validar len().
 """
 
 # E — ValueError (conversión inválida)
-n = int("tres")
+n = 3
+print(n)
 
 """
 Qué verás: ValueError: invalid literal for int() with base 10: 'tres'.
